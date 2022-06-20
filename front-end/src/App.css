@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(to bottom right, purple, olive) ;
 }
 
 .App-logo {
@@ -68,4 +69,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.trainerlist {
+  border: 10px;
+  border-radius: 10px;
+  position: left;
 }
