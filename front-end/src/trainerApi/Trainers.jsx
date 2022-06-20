@@ -31,7 +31,6 @@ const Trainers = () => {
             <AddNewTrainer getData={setFetchData} fetchData={fetchData} />
             <br />
             <DeleteTrainer getData={setFetchData} fetchData={fetchData} />
-
         </>
     );
 }
