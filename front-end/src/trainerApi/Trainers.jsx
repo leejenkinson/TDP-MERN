@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Trainer from "../Trainer";
 import AddNewTrainer from "./AddNewTrainer";
 import DeleteTrainer from "./DeleteTrainer";
-import UpdateTrainer from "./AddNewTrainer";
+
 
 const Trainers = () => {
 
