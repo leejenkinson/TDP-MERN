@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Trainer from "../Trainer";
-import AddNewTrainer from "./AddNewTrainer";
-import DeleteTrainer from "./DeleteTrainer";
+
 
 
 const Trainers = () => {
@@ -27,10 +26,9 @@ const Trainers = () => {
                 }
             </div>
             <br />
-            <h2>Add new trainer: </h2>
-            <AddNewTrainer getData={setFetchData} fetchData={fetchData} />
-            <br />
-            <DeleteTrainer getData={setFetchData} fetchData={fetchData} />
+          
+            
+     
         </>
     );
 }
