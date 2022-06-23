@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
-
+import { Button, Form, Container, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const AddNewTrainer = ({ getData, fetchData }) => {
 
@@ -62,22 +63,48 @@ const AddNewTrainer = ({ getData, fetchData }) => {
 
 
     return (
-        <form >
+        <div>
             <h4>Insert values into the following boxes: </h4>
-            <input type="number" min={0} placeholder="ID" value={id} onChange={(e) => { setId(e.target.value) }} />
-            <br />
-            <input type="text" placeholder="Name" value={name} onChange={(e) => { setName(e.target.value) }} />
-            <br />
-            <input type="number" min={1} max={150} placeholder="Age" value={age} onChange={(e) => { setAge(e.target.value) }} />
-            <br />
-            <input type="text" placeholder="Specialism" value={special} onChange={(e) => { setSpecial(e.target.value) }} />
-            <br />
+            <Container>
+          <Form>
+            <Row>
+              <Col md>
+                <Form.Group controlId="formID">
+                  <Form.Label>ID</Form.Label>
+                  <Form.Control type="number" min={0} placeholder="Insert ID here" value={id} onChange={(e) => { setId(e.target.value) }}/>
+                </Form.Group>
+              </Col>
+              <Col md>
+                <Form.Group controlId="formName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type="text" placeholder="Insert Name here" value={name} onChange={(e) => { setName(e.target.value) }} />
+                </Form.Group>
+              </Col>
+            </Row>
+            <Row>
+              <Col md>
+                <Form.Group controlId="formAge">
+                  <Form.Label>Age</Form.Label>
+                  <Form.Control type="number" min={1} max={150} placeholder="Insert Age here" value={age} onChange={(e) => { setAge(e.target.value) }}/>
+                  
+                </Form.Group>
+              </Col>
+              <Col md>
+                <Form.Group controlId="formSpecialism">
+                  <Form.Label>Specialism</Form.Label>
+                  <Form.Control type="text" placeholder="Insert Specialism here" value={special} onChange={(e) => { setSpecial(e.target.value) }} />
+                   
+                </Form.Group>
+              </Col>
+            </Row>
             <h4>Select POST (to add a new trainer)</h4>
-            <button className="button1" onClick={handleSubmit} >POST</button>
+            <Button variant="primary" className="button1" onClick={handleSubmit} >POST</Button>
             <h4>Select UPDATE (to update trainer)</h4>
-            <button className="button2" onClick={handleUpdate} >UPDATE</button>
-        </form>
-    );
+            <Button variant="secondary" className="button2" onClick={handleUpdate} >UPDATE</Button>
+        
+          </Form>
+          </Container>
+           </div> );
 }
 
 export default AddNewTrainer;
