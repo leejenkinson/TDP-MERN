@@ -65,7 +65,7 @@ const AddNewTrainer = ({ getData, fetchData }) => {
     return (
         <div>
             <h4>Insert values into the following boxes: </h4>
-            <Container>
+            <Container style={{ width: '30rem' }} className="justify-content-end">
           <Form>
             <Row>
               <Col md>

@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row } from "react-bootstrap";
 
 
-
 const Trainers = () => {
 
     const [trainers, setTrainers] = useState([]);
@@ -21,21 +20,21 @@ const Trainers = () => {
 
     return (
         <>
-            <div className="trainerList">
             <h2>List of trainers: </h2>
-               <Container id="fullTrainerList" className="flex-fill">
-                <Row className="m-auto">
-
+               <Container id="fullTrainerList" className="d-flex vw-100">
+                    <Row className="m-auto">
                     {
-                        trainers.map(trainer => <Trainer key={trainer._id} id={trainer._id} name={trainer.name} age={trainer.age} specialism={trainer.specialism} />)
+                        trainers.map
+                        (trainer => <Trainer 
+                            key={trainer._id} 
+                            id={trainer._id} 
+                            name={trainer.name} 
+                            age={trainer.age} 
+                            specialism={trainer.specialism} />)
                     }
                     </Row>
                </Container> 
-            </div>
             <br />
-
-
-
         </>
     );
 }

@@ -31,18 +31,14 @@ function App() {
         </Nav>
       </Container>
 
-
-
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Trainers />} />
           <Route path="/addnewtrainer" element={<AddNewTrainer />} />
           <Route path="/deletetrainer" element={<DeleteTrainer />} />
           <Route exact path="/FindTrainer" element={<FindTrainer />} />
-          
         </Routes>
       </BrowserRouter>
-
     </div>
   );
 }

@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
+import { Card, CardGroup, Col, Row } from 'react-bootstrap';
 // const props = { name, age, specialism};
-const Trainer = ({id, name, age, specialism}) => {
+const Trainer = ({ id, name, age, specialism }) => {
     return (
-        <div>
-            <Card className="mb3" border="info" style={{ width: '18rem'}}>
-                <Card.Body>
-                    <Card.Title><h3>ID: {id}</h3> </Card.Title>
-                    <p>Name: {name}</p>
-                    <p>Age: {age}</p>
-                    <p>Specialism: {specialism}</p>
-                </Card.Body>    
-            </Card>
-        </div>
+
+        <Card bg="warning" style={{ width: '18rem' }}>
+
+            <Card.Body>
+                <Card.Title><h3>ID: {id}</h3> </Card.Title>
+                <p>Name: {name}</p>
+                <p>Age: {age}</p>
+                <p>Specialism: {specialism}</p>
+            </Card.Body>
+
+        </Card>
     )
 }
 
