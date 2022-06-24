@@ -4,15 +4,14 @@ import { Card, CardGroup, Col, Row } from 'react-bootstrap';
 const Trainer = ({ id, name, age, specialism }) => {
     return (
 
-        <Card bg="warning" style={{ width: '18rem' }}>
-
+        <Card bg="light" border="warning" style={{ width: '18rem' }}>
+            <Card.Img src="https://picsum.photos/id/0/367/267" />
             <Card.Body>
                 <Card.Title><h3>ID: {id}</h3> </Card.Title>
-                <p>Name: {name}</p>
-                <p>Age: {age}</p>
-                <p>Specialism: {specialism}</p>
+                    <p>Name: {name}</p>
+                    <p>Age: {age}</p>
+                    <p>Specialism: {specialism}</p>
             </Card.Body>
-
         </Card>
     )
 }
